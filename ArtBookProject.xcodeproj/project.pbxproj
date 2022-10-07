@@ -14,6 +14,7 @@
 		0003981D28EF1C43001509B5 /* ArtBookProject.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0003981B28EF1C43001509B5 /* ArtBookProject.xcdatamodeld */; };
 		0003981F28EF1C45001509B5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0003981E28EF1C45001509B5 /* Assets.xcassets */; };
 		0003982228EF1C45001509B5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0003982028EF1C45001509B5 /* LaunchScreen.storyboard */; };
+		00A625E528F0523400AAFE6D /* select.png in Resources */ = {isa = PBXBuildFile; fileRef = 00A625E428F0523400AAFE6D /* select.png */; };
 		00AD0DAE28EF1EC1005E0E22 /* DetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00AD0DAD28EF1EC1005E0E22 /* DetailsVC.swift */; };
 /* End PBXBuildFile section */
 
@@ -27,6 +28,7 @@
 		0003981E28EF1C45001509B5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0003982128EF1C45001509B5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0003982328EF1C45001509B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		00A625E428F0523400AAFE6D /* select.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = select.png; path = ../../../../../Downloads/select.png; sourceTree = "<group>"; };
 		00AD0DAD28EF1EC1005E0E22 /* DetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -60,6 +62,7 @@
 		0003981128EF1C43001509B5 /* ArtBookProject */ = {
 			isa = PBXGroup;
 			children = (
+				00A625E428F0523400AAFE6D /* select.png */,
 				0003981228EF1C43001509B5 /* AppDelegate.swift */,
 				0003981428EF1C43001509B5 /* SceneDelegate.swift */,
 				0003981628EF1C43001509B5 /* ViewController.swift */,
@@ -132,6 +135,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0003982228EF1C45001509B5 /* LaunchScreen.storyboard in Resources */,
+				00A625E528F0523400AAFE6D /* select.png in Resources */,
 				0003981F28EF1C45001509B5 /* Assets.xcassets in Resources */,
 				0003981A28EF1C43001509B5 /* Main.storyboard in Resources */,
 			);

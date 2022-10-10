@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import CoreData
 
 class DetailsVC: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
@@ -38,7 +39,7 @@ class DetailsVC: UIViewController, UIImagePickerControllerDelegate, UINavigation
         picker.sourceType = .photoLibrary
         picker.allowsEditing = true
         present(picker, animated: true, completion: nil)
-        
+    
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
@@ -51,7 +52,32 @@ class DetailsVC: UIViewController, UIImagePickerControllerDelegate, UINavigation
     }
     
     @IBAction func saveButtonClicked(_ sender: Any) {
-        print("test")
+        
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let context = appDelegate.persistentContainer.viewContext
+        
+        let newPainting = NSEntityDescription.insertNewObject(forEntityName: "Paintings", into: context)
+        
+        //Attributes
+        
+        newPainting.setValue(nameText.text, forKey: "name")
+        newPainting.setValue(artistText.text, forKey: "artist")
+        newPainting.setValue(UUID(), forKey: "id")
+        if let year = Int(yearText.text!){
+            newPainting.setValue(year, forKey: "year")
+        }
+        let data = imageView.image!.jpegData(compressionQuality: 0.5)
+        
+        newPainting.setValue(data, forKey: "image")
+        
+        do{
+            try context.save()
+        }catch {
+            print("error")
+        }
+      
+        
+        
     }
     
    

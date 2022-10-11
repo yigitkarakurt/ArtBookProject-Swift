@@ -115,16 +115,20 @@ class DetailsVC: UIViewController, UIImagePickerControllerDelegate, UINavigation
         
         newPainting.setValue(nameText.text, forKey: "name")
         newPainting.setValue(artistText.text, forKey: "artist")
-        newPainting.setValue(UUID(), forKey: "id")
+        
+        
         if let year = Int(yearText.text!){
             newPainting.setValue(year, forKey: "year")
         }
+        newPainting.setValue(UUID(), forKey: "id")
+        
         let data = imageView.image!.jpegData(compressionQuality: 0.5)
         
         newPainting.setValue(data, forKey: "image")
         
         do{
             try context.save()
+            print("success")
         }catch {
             print("error")
         }

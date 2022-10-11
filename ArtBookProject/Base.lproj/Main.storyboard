@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="q9R-eX-riM">
-    <device id="retina6_7" orientation="portrait" appearance="light"/>
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -13,11 +13,11 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ArtBookProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="xu9-ag-gur">
-                                <rect key="frame" x="0.0" y="88" width="428" height="804"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                         </subviews>
@@ -45,10 +45,10 @@
             <objects>
                 <viewController id="do6-zI-Bte" customClass="DetailsVC" customModule="ArtBookProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Zu1-5N-d1Q">
-                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Artist" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OMC-3p-dvq">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Artist" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OMC-3p-dvq">
                                 <rect key="frame" x="43" y="549" width="328" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="34" id="4ea-gw-Exo"/>
@@ -56,7 +56,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Year" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Uu9-jD-Zmc">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Year" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Uu9-jD-Zmc">
                                 <rect key="frame" x="43" y="619" width="328" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="34" id="F8U-vM-ie6"/>
@@ -64,18 +64,16 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0kB-WO-yVN">
-                                <rect key="frame" x="168" y="736" width="79" height="49"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="gray" title="Save"/>
-                                <connections>
-                                    <action selector="saveButtonClicked:" destination="do6-zI-Bte" eventType="touchUpInside" id="j6M-5w-Idw"/>
-                                </connections>
-                            </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="selectPhoto.png" translatesAutoresizingMaskIntoConstraints="NO" id="IfN-lf-fOK">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="selectPhoto.png" translatesAutoresizingMaskIntoConstraints="NO" id="IfN-lf-fOK">
                                 <rect key="frame" x="43" y="128" width="328" height="286"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="328" id="0X2-n7-xf2"/>
+                                    <constraint firstAttribute="height" constant="286" id="GYI-SD-85N"/>
+                                    <constraint firstAttribute="width" constant="328" id="bsn-rD-H15"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="286" id="gdD-c3-Scc"/>
+                                </constraints>
                             </imageView>
-                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ut2-Bx-gbT">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ut2-Bx-gbT">
                                 <rect key="frame" x="43" y="475" width="328" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="34" id="GFA-2l-tGy"/>
@@ -83,6 +81,14 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0kB-WO-yVN">
+                                <rect key="frame" x="152" y="719" width="110" height="60"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="Save"/>
+                                <connections>
+                                    <action selector="saveButtonClicked:" destination="do6-zI-Bte" eventType="touchUpInside" id="j6M-5w-Idw"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="8Sz-yk-Vrq"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -91,7 +97,7 @@
                             <constraint firstItem="IfN-lf-fOK" firstAttribute="centerX" secondItem="Ut2-Bx-gbT" secondAttribute="centerX" id="GGD-rN-f5V"/>
                             <constraint firstItem="Ut2-Bx-gbT" firstAttribute="trailing" secondItem="OMC-3p-dvq" secondAttribute="trailing" id="HqD-sk-6Cl"/>
                             <constraint firstItem="IfN-lf-fOK" firstAttribute="leading" secondItem="8Sz-yk-Vrq" secondAttribute="leading" constant="43" id="Iqf-IK-slR"/>
-                            <constraint firstItem="8Sz-yk-Vrq" firstAttribute="bottom" secondItem="0kB-WO-yVN" secondAttribute="bottom" constant="77" id="JLg-a6-1MY"/>
+                            <constraint firstItem="8Sz-yk-Vrq" firstAttribute="bottom" secondItem="0kB-WO-yVN" secondAttribute="bottom" constant="83" id="JLg-a6-1MY"/>
                             <constraint firstItem="Ut2-Bx-gbT" firstAttribute="leading" secondItem="8Sz-yk-Vrq" secondAttribute="leading" constant="43" id="Ntc-bX-jCq"/>
                             <constraint firstItem="IfN-lf-fOK" firstAttribute="centerX" secondItem="Zu1-5N-d1Q" secondAttribute="centerX" id="Xsl-h5-Som"/>
                             <constraint firstItem="Uu9-jD-Zmc" firstAttribute="top" secondItem="OMC-3p-dvq" secondAttribute="bottom" constant="36" id="YZh-8P-69Z"/>
@@ -99,10 +105,10 @@
                             <constraint firstItem="Ut2-Bx-gbT" firstAttribute="top" secondItem="IfN-lf-fOK" secondAttribute="bottom" constant="61" id="fc0-7O-dPL"/>
                             <constraint firstItem="OMC-3p-dvq" firstAttribute="leading" secondItem="Uu9-jD-Zmc" secondAttribute="leading" id="gk4-CK-quA"/>
                             <constraint firstItem="Ut2-Bx-gbT" firstAttribute="leading" secondItem="OMC-3p-dvq" secondAttribute="leading" id="hTw-63-url"/>
-                            <constraint firstItem="Uu9-jD-Zmc" firstAttribute="centerX" secondItem="0kB-WO-yVN" secondAttribute="centerX" id="p8d-ft-ULK"/>
-                            <constraint firstItem="0kB-WO-yVN" firstAttribute="leading" secondItem="8Sz-yk-Vrq" secondAttribute="leading" constant="168" id="pnf-mt-pfU"/>
+                            <constraint firstItem="Uu9-jD-Zmc" firstAttribute="centerX" secondItem="0kB-WO-yVN" secondAttribute="centerX" constant="-0.5" id="p8d-ft-ULK"/>
+                            <constraint firstItem="0kB-WO-yVN" firstAttribute="leading" secondItem="8Sz-yk-Vrq" secondAttribute="leading" constant="152" id="pnf-mt-pfU"/>
                             <constraint firstItem="OMC-3p-dvq" firstAttribute="trailing" secondItem="Uu9-jD-Zmc" secondAttribute="trailing" id="xlr-jh-UaR"/>
-                            <constraint firstItem="0kB-WO-yVN" firstAttribute="top" secondItem="Uu9-jD-Zmc" secondAttribute="bottom" constant="83" id="zza-Xn-rYa"/>
+                            <constraint firstItem="0kB-WO-yVN" firstAttribute="top" secondItem="Uu9-jD-Zmc" secondAttribute="bottom" constant="66" id="zza-Xn-rYa"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="JRW-Wd-lAu"/>
@@ -124,7 +130,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="q9R-eX-riM" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="a6y-hs-ovw">
-                        <rect key="frame" x="0.0" y="44" width="428" height="44"/>
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
